@@ -7,7 +7,6 @@
 # email: efimooov.stanislav@gmail.com
 # ------------------------------------------------------------
 
-import traceback
 from flask import Flask
 from flask_restful import Api, request
 import math
@@ -57,7 +56,6 @@ def equal():
                 x1, x2 = get_equal(a, b, discriminant)
                 return f'Корни уравнения: x1 = {x1}, x2 = {x2}'
     except:
-        traceback.print_exc()
         return 'Такого запроса нет'
 
 
@@ -77,7 +75,6 @@ def color(num):
 
         return f'Вы выбрали {all_arr[num]} цвет.'
     except:
-        traceback.print_exc()
         return 'Такого запроса нет'
 
 
